@@ -4,7 +4,7 @@
 # rild.libpath=/system/lib/libril-moto-umts-1.so
 rild.libpath=/system/lib/libmoto_ril.so
 rild.libargs=-d /dev/ttyO0
-telephony.lteOnCdmaDevice=1
+telephony.lteOnCdmaDevice=0
 ro.mot.ril.danlist=611,*611,#611
 persist.ril.ecclist=911,*911,#911
 
@@ -48,10 +48,10 @@ ro.cdma.nbpcd=1
 # END IKSHADOW-702
 
 persist.mot.usb.mediasync = 1
-# persist.usb.android_config = 1
+persist.usb.android_config = 1
 
 #Proximity sensor debounce time
-mot.proximity.delay=450
+mot.proximity.delay=0
 # disable touch below 60 pixels
 mot.proximity.distance=60
 
@@ -169,7 +169,7 @@ ro.gsm.2nd_data_retry_config=max_retries=infinite,default_randomization=2000,0,0
 ro.mot.setuptype=2
 ro.horizontalIM=true
 ro.ril.svlte1x=true
-ro.mot.lte_on_cdma=1
+ro.mot.lte_on_cdma=0
 ro.mot.tmp.telephony.refactor=true
 ro.mot.dpmext=true
 ro.com.google.clientid=android-motorola
@@ -184,4 +184,4 @@ ro.telephony.get_imsi_from_sim=true
 
 # Vold switchability uncomment second line to swap
 ro.vold.switchablepair=/storage/sdcard0,/storage/sdcard1
-#persist.sys.vold.switchexternal=1
+persist.sys.vold.switchexternal=1
